@@ -41,6 +41,8 @@ export const CURRENCY_UNITS = ['SATS', 'BTC'];
 
 export const CURRENCY_UNIT_FORMATS = { Sats: '1.0-0', BTC: '1.6-6', OTHER: '1.2-2' };
 
+export const BALANCE_FORMAT = ',.3f';
+
 export const FIAT_CURRENCIES = [
 	{ currency:	'USD', symbol: faDollarSign },
 	{ currency:	'AUD', symbol: faDollarSign },
@@ -120,6 +122,30 @@ export enum PaymentType {
   OFFER = 'Offer',
   KEYSEND = 'Keysend'
 };
+
+export enum TimeGranularity {
+  MINUTE = "Minutely",
+  HOURLY = "Hourly",
+  DAILY = "Daily",
+  WEEKLY = "Weekly",
+  MONTHLY = "Monthly",
+  YEARLY = "Yearly",
+};
+
+export const secondsForTimeGranularity = (timeGranularity: TimeGranularity): number => {
+  switch (timeGranularity) {
+    case TimeGranularity.MINUTE:
+      return 60;
+    case TimeGranularity.HOURLY:
+      return 3600;
+    case TimeGranularity.DAILY:
+      return 86400;
+    case TimeGranularity.WEEKLY:
+    case TimeGranularity.MONTHLY:
+    case TimeGranularity.YEARLY:
+    return 86400;
+  }
+}
 
 export const APP_ANIMATION_DURATION = 2;
 export const TRANSITION_DURATION = 0.3;

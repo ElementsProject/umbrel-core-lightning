@@ -23,6 +23,9 @@ $success: #33DB95;
 $warning: #FE8E02;
 $danger: #DC3545;
 $blue: #1B2559;
+$positive-value: #03A558;
+$negative-value: #C47806;
+$worst-channel: #B18b53;
 $darker-blue: #141C44;
 $light: #9F9F9F;
 $dark: #3A4247;
@@ -44,6 +47,15 @@ $body-color-dark: $white;
 $border-radius: 1.25rem;
 $btn-link-color: $primary;
 $btn-padding-x: .625rem;
+
+$picker-width: 5.5rem;
+$picker-border-radius: 8px;
+$picker-border-color-dark: #121215;
+$picker-background-color-dark: #303032;
+
+$table-header-background-color-dark: #272424;
+$table-border-color-dark: #464646;
+$table-border-radius: 4px;
 
 $form-check-input-checked-bg-color: $primary;
 $form-check-input-checked-border-color: $primary;

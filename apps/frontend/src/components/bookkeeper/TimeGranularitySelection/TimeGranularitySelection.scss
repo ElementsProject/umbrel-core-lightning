@@ -1,0 +1,55 @@
+@import '../../../styles/constants.scss';
+
+.time-granularity-dropdown.dropdown {
+  & button.dropdown-toggle {
+    width: $picker-width;
+    border-radius: $picker-border-radius;
+    border-color: $border-color;
+    background-color: none;
+    background-image: none;
+    &::after {
+      display: none;
+    }
+    & .dropdown-toggle-text {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+      display: inline-flex;
+    }
+  }
+
+  .dropdown-menu {
+    .dropdown-item {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .time-granularity-dropdown.dropdown {
+    & button.dropdown-toggle {
+      border-color: $picker-border-color-dark;
+      background-color: $picker-background-color-dark;
+      box-shadow: none;
+      & .dropdown-toggle-text {
+        color: #b7bbc2;
+      }
+      &.btn.show {
+        border-color: #121215;
+        box-shadow: none;
+      }
+    }
+
+    .dropdown-menu {
+      border-color: #121215;
+      .dropdown-item {
+        color: #b7bbc2;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
